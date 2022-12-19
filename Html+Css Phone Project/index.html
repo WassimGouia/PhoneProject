@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Website Design Using Html And Css</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            <nav>
+                <div class="logo">
+                    <img src="Minimalist Mascot Phone Logo.png">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="Information">
+                <div class="overlay">
+                </div>
+                <img src="apple-iphone-14-pro-max-1tb-gold-450109-removebg-preview.png" class="mobile">
+                <div id="circle">
+                    <div class="feature one">
+                        <img src="camera.png" alt="camera">
+                        <div>
+                            <h1>camera</h1>
+                            <p>48 Mpx, 12 Mpx, 12 Mpx , 3X Zoom</p>
+                        </div>
+                    </div>
+                    <div class="feature two">
+                        <img src="processor.png" alt="processor">
+                        <div>
+                            <h1>processor</h1>
+                            <p>A16 Bionic</p>
+                        </div>
+                    </div>
+                    <div class="feature three">
+                        <img src="display.png" alt="display">
+                        <div>
+                            <h1>display</h1>
+                            <p>6.1 inch , 120Hz</p>
+                        </div>
+                    </div>
+                    <div class="feature four">
+                        <img src="battery.png" alt="battery">
+                        <div>
+                            <h1>battery</h1>
+                            <p>3200mAh  </p>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+            
+            <div class="controls">
+                <img src="arrow.png" id="upBtn">
+                <h3>Features</h3>
+                <img src="arrow.png" id="downBtn">
+            </div>
+        </div>
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum ;
+            upBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+            downBtn.onclick = function(){
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+        </script>
+    </body>
+</html>
